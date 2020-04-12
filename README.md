@@ -43,3 +43,7 @@ python sensor_train_emission.py --resume False --save_model True --test False
 ```
 python sensor_train_emission.py --resume True --test True --test_path "path to the model"
 ```
+
+## Acknowlegdements
+
+Part of code borrow from https://github.com/snakeztc/NeuralDialog-CVAE. Thanks for their excellent work!
