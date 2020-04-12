@@ -44,6 +44,23 @@ python sensor_train_emission.py --resume False --save_model True --test False
 python sensor_train_emission.py --resume True --test True --test_path "path to the model"
 ```
 
+## Model for Prediction
+
+We provide two well trained model for the two tasks.
+
+For emission prediction tasks, the results can be obtained by:
+
+```
+python sensor_train_emission.py --resume True --test True --test_path ./work_dir/run1586726418/checkpoints/SensorRNN.ckpt-15
+```
+
+For excitation prediction tasks, the results can be obtained by:
+
+```
+python sensor_train_excitation.py --resume True --test True --test_path ./work_dir/run1582060157/checkpoints/SensorRNN.ckpt-16
+```
+
+
 ## Acknowlegdements
 
 Part of code borrow from https://github.com/snakeztc/NeuralDialog-CVAE. Thanks for their excellent work!
