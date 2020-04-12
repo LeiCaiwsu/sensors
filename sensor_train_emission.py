@@ -80,7 +80,7 @@ def main():
         if FLAGS.resume:
             print(("Reading dm models parameters from %s" % FLAGS.test_path))
             model_checkpoint_path = FLAGS.test_path
-            model.saver.restore(sess, ckpt.model_checkpoint_path)
+            model.saver.restore(sess, model_checkpoint_path)
 
         if FLAGS.test:
             test_label, test_prediction, test_loss, weights = test_model.test(sess, test_feed)
