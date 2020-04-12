@@ -79,10 +79,10 @@ def main():
         print("Created models with fresh parameters.")
         sess.run(tf.global_variables_initializer())
 
-        if ckpt:
-            print(("Reading dm models parameters from %s" % ckpt.model_checkpoint_path))
-            ckpt.model_checkpoint_path = './work_dir/run1582060157/checkpoints/SensorRNN.ckpt-16'
-            model.saver.restore(sess, ckpt.model_checkpoint_path)
+        if FLAGS.resume:
+            print(("Reading dm models parameters from %s" % FLAGS.test_path))
+            model_checkpoint_path = FLAGS.test_path
+            model.saver.restore(sess, model_checkpoint_path)
 
         if FLAGS.test:
             #test_feed = train_feed
